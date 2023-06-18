@@ -1,0 +1,24 @@
+@host = http://localhost:3000
+@urlClientes = /api/clientes
+
+@urlHoteles = /api/hoteles
+
+@urlViajes = /api/viajes
+
+
+##### API de Clientes #####
+# GET http://localhost:3000/api/clientes
+GET {{host}}{{urlClientes}}
+
+
+
+##### API de Hoteles #####
+{{host}}{{urlHoteles}}
+
+
+
+
+##### API de Viajes #####
+{{host}}{{urlViajes}}
+
+
