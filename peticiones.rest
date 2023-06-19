@@ -13,12 +13,12 @@ GET {{host}}{{urlClientes}}
 
 
 ##### API de Hoteles #####
-{{host}}{{urlHoteles}}
+GET {{host}}{{urlHoteles}}
 
 
 
 
 ##### API de Viajes #####
-{{host}}{{urlViajes}}
+GET {{host}}{{urlViajes}}
 
 
