@@ -27,6 +27,8 @@ Content-Type: application/json
     "dni": "33345678A"
   }
 
+###
+DELETE {{host}}{{urlClientes}}/11
 
 
 ##### API de Hoteles #####

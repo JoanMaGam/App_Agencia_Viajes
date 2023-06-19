@@ -13,5 +13,8 @@ const create = ({ nombre, apellidos, direccion, telefono, fecha_nacimiento, emai
     return db.query(`INSERT INTO ${tableDb} ( nombre, apellidos, direccion, telefono, fecha_nacimiento, email, dni) VALUES ( ?, ?, ?, ?, ?, ?,? )`, [nombre, apellidos, direccion, telefono, fecha_nacimiento, email, dni]);
 };
 
+const deleteClientById = (clienteId) => {
+    return db.query(`DELETE FROM ${tableDb} WHERE id=?`, [clienteId]);
+};
 
-module.exports = { getAll, getById, create }
+module.exports = { getAll, getById, create, deleteClientById }
