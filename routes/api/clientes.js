@@ -1,7 +1,9 @@
 const router = require('express').Router();
 
-router.get('/', (req, res) => {
-    res.end('obtener todos los clientes')
+router.get('/', async (req, res) => {
+    const [result] = await db.query('SELECT * FROM agencia_viajes_app.clientes');
+    console.log(result);
+    res.end('terminada peticion')
 });
 
 module.exports = router; 
