@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { getAll, getById, create, deleteClientById } = require('../../models/cliente.model');
+const { getAll, getById, create, deleteClientById, update } = require('../../models/cliente.model');
 
 
 // Peticiones GET
@@ -38,6 +38,17 @@ router.post('/', async (req, res) => {
 router.delete('/:id', async (req, res) => {
     try {
         const [result] = await deleteClientById(Number(req.params.id));
+        res.json(result);
+    } catch (error) {
+        res.json({ fatal: error.message });
+    }
+});
+
+// Peticiones Update (PUT)
+
+router.put('/update/:id', async (req, res) => {
+    try {
+        const [result] = await update(Number(req.params.id, req.body));
         res.json(result);
     } catch (error) {
         res.json({ fatal: error.message });

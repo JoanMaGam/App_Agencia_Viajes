@@ -17,4 +17,8 @@ const deleteClientById = (clienteId) => {
     return db.query(`DELETE FROM ${tableDb} WHERE id=?`, [clienteId]);
 };
 
-module.exports = { getAll, getById, create, deleteClientById }
+const update = (clienteId, { nombre, apellidos }) => {
+
+};
+
+module.exports = { getAll, getById, create, deleteClientById, update }

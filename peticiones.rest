@@ -28,8 +28,15 @@ Content-Type: application/json
   }
 
 ###
-DELETE {{host}}{{urlClientes}}/11
+DELETE {{host}}{{urlClientes}}/13
 
+###
+PUT {{host}}{{urlClientes}}/update/14
+Content-Type: application/json
+
+{
+    
+}
 
 ##### API de Hoteles #####
 GET {{host}}{{urlHoteles}}
