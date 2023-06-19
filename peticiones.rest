@@ -10,6 +10,23 @@
 # GET http://localhost:3000/api/clientes
 GET {{host}}{{urlClientes}}
 
+###
+GET {{host}}{{urlClientes}}/9
+
+###
+POST {{host}}{{urlClientes}}
+Content-Type: application/json
+
+{
+    "nombre": "Peter",
+    "apellidos": "Collins",
+    "direccion": "Av. Palo 23",
+    "telefono": "746555123",
+    "fecha_nacimiento": "1979-02-17 23:01:00.00",
+    "email": "pc@gmail.com",
+    "dni": "33345678A"
+  }
+
 
 
 ##### API de Hoteles #####
