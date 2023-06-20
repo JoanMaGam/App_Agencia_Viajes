@@ -17,8 +17,8 @@ const deleteClientById = (clienteId) => {
     return db.query(`DELETE FROM ${tableDb} WHERE id=?`, [clienteId]);
 };
 
-const update = (clienteId, { nombre, apellidos }) => {
-
+const update = (clienteId, { nombre, apellidos, direccion, telefono, fecha_nacimiento, email, dni }) => {
+    return db.query(`UPDATE ${tableDb} SET clientes.nombre = ?, clientes.apellidos = ?, clientes.direccion = ?,clientes.telefono=?,clientes.fecha_nacimiento=?,clientes.email=?,clientes.dni=? WHERE clientes.id = ?;`, [nombre, apellidos, direccion, telefono, fecha_nacimiento, email, dni, clienteId]);
 };
 
 module.exports = { getAll, getById, create, deleteClientById, update }

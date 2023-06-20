@@ -35,7 +35,13 @@ PUT {{host}}{{urlClientes}}/update/14
 Content-Type: application/json
 
 {
-    
+    "nombre": "Steve",
+    "apellidos": "Edwards",
+    "direccion": "Av. Capi 23",
+    "telefono": "746000123",
+    "fecha_nacimiento": "1888-02-17 10:01:00.00",
+    "email": "cap@gmail.com",
+    "dni": "33345678C"
 }
 
 ##### API de Hoteles #####
