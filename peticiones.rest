@@ -10,15 +10,113 @@
 # GET http://localhost:3000/api/clientes
 GET {{host}}{{urlClientes}}
 
+###
+GET {{host}}{{urlClientes}}/9
 
+###
+POST {{host}}{{urlClientes}}
+Content-Type: application/json
+
+{
+    "nombre": "Peter",
+    "apellidos": "Collins",
+    "direccion": "Av. Palo 23",
+    "telefono": "746555123",
+    "fecha_nacimiento": "1979-02-17 23:01:00.00",
+    "email": "pc@gmail.com",
+    "dni": "33345678A"
+  }
+
+###
+DELETE {{host}}{{urlClientes}}/13
+
+###
+PUT {{host}}{{urlClientes}}/update/14
+Content-Type: application/json
+
+{
+    "nombre": "Steve",
+    "apellidos": "Edwards",
+    "direccion": "Av. Capi 23",
+    "telefono": "746000123",
+    "fecha_nacimiento": "1888-02-17 10:01:00.00",
+    "email": "cap@gmail.com",
+    "dni": "33345678C"
+}
 
 ##### API de Hoteles #####
-{{host}}{{urlHoteles}}
+# GET http://localhost:3000/api/hoteles
+GET {{host}}{{urlHoteles}}
+
+###
+GET {{host}}{{urlHoteles}}/1
+
+###
+POST {{host}}{{urlHoteles}}
+Content-Type: application/json
+
+{
+    "nombre": "NH Hoteles",
+    "direccion": "Av. Paz 23",
+    "ciudad": "Madrid",
+    "numero_estrellas": 4,
+    "descripcion": "Hotel céntrico con servicio de SPA",
+    "tarifa": "150.50"
+  }
+
+###
+DELETE {{host}}{{urlHoteles}}/2
+
+###
+PUT {{host}}{{urlHoteles}}/update/3
+Content-Type: application/json
+
+{
+    "nombre": "Princess",
+    "direccion": "Av. Princesas 23",
+    "ciudad": "Valencia",
+    "numero_estrellas": 5,
+    "descripcion": "El mejor hotel de Valencia",
+    "tarifa": "350.50"
+}
 
 
 
 
 ##### API de Viajes #####
-{{host}}{{urlViajes}}
+# GET http://localhost:3000/api/hoteles
+GET {{host}}{{urlViajes}}
 
+###
+GET {{host}}{{urlViajes}}/1
 
+###
+POST {{host}}{{urlViajes}}
+Content-Type: application/json
+
+{
+    "fecha_salida": "2023-11-03 05:00:00.00",
+    "fecha_vuelta": "2023-12-03 06:00:00.00",
+    "id_vuelo_ida": "RQ1234",
+    "id_vuelo_vuelta": "JP4321",
+    "hotel": "Princess",
+    "clientes_id": 2,
+    "hotel_id": 3
+  }
+
+###
+DELETE {{host}}{{urlViajes}}/2
+
+###
+PUT {{host}}{{urlViajes}}/update/3
+Content-Type: application/json
+
+{
+    "fecha_salida": "2024-01-03 05:00:00.00",
+    "fecha_vuelta": "2024-02-03 06:00:00.00",
+    "id_vuelo_ida": "XX1234",
+    "id_vuelo_vuelta": "JP5555",
+    "hotel": "NH hoteles",
+    "clientes_id": 1,
+    "hotel_id": 1
+}
