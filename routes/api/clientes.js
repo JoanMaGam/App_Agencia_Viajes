@@ -50,7 +50,6 @@ router.put('/update/:id', async (req, res) => {
     try {
         const [result] = await update(Number(req.params.id), req.body);
         const [result_final] = await getById(Number(req.params.id));
-        // res.json(result);
         res.json(result_final);
     } catch (error) {
         res.json({ fatal: error.message });

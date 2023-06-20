@@ -1,4 +1,5 @@
-//libreria de métodos que interan con la entidad clientes en la BD
+//libreria de métodos que interactuan con la entidad clientes en la BD
+
 const tableDb = 'agencia_viajes_app.clientes';
 
 const getAll = () => {
@@ -18,7 +19,7 @@ const deleteClientById = (clienteId) => {
 };
 
 const update = (clienteId, { nombre, apellidos, direccion, telefono, fecha_nacimiento, email, dni }) => {
-    return db.query(`UPDATE ${tableDb} SET clientes.nombre = ?, clientes.apellidos = ?, clientes.direccion = ?,clientes.telefono=?,clientes.fecha_nacimiento=?,clientes.email=?,clientes.dni=? WHERE clientes.id = ?;`, [nombre, apellidos, direccion, telefono, fecha_nacimiento, email, dni, clienteId]);
+    return db.query(`UPDATE ${tableDb} SET clientes.nombre = ?, clientes.apellidos = ?, clientes.direccion = ?, clientes.telefono = ?, clientes.fecha_nacimiento = ?, clientes.email = ?, clientes.dni = ? WHERE clientes.id = ?;`, [nombre, apellidos, direccion, telefono, fecha_nacimiento, email, dni, clienteId]);
 };
 
 module.exports = { getAll, getById, create, deleteClientById, update }
