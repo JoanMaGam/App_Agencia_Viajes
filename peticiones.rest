@@ -122,6 +122,6 @@ Content-Type: application/json
 }
 
 ###
-PUT {{host}}{{urlViajes}}/2/cliente/3
+PUT {{host}}{{urlViajes}}/1/cliente/1
 
 
