@@ -25,7 +25,7 @@ Content-Type: application/json
     "fecha_nacimiento": "1979-02-17 23:01:00.00",
     "email": "pc@gmail.com",
     "dni": "33345678A"
-  }
+}
 
 ###
 DELETE {{host}}{{urlClientes}}/13
@@ -62,7 +62,7 @@ Content-Type: application/json
     "numero_estrellas": 4,
     "descripcion": "Hotel céntrico con servicio de SPA",
     "tarifa": "150.50"
-  }
+}
 
 ###
 DELETE {{host}}{{urlHoteles}}/2
@@ -79,8 +79,6 @@ Content-Type: application/json
     "descripcion": "El mejor hotel de Valencia",
     "tarifa": "350.50"
 }
-
-
 
 
 ##### API de Viajes #####
@@ -102,7 +100,7 @@ Content-Type: application/json
     "hotel": "Princess",
     "clientes_id": 2,
     "hotel_id": 3
-  }
+}
 
 ###
 DELETE {{host}}{{urlViajes}}/2
@@ -121,7 +119,7 @@ Content-Type: application/json
     "hotel_id": 1
 }
 
-###
+### Petición de asociación viaje con cliente
 PUT {{host}}{{urlViajes}}/1/cliente/1
 
 
