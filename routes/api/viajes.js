@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { getAll, getById, create, deleteTravelById, update } = require('../../models/viaje.model');
+const { getAll, getById, create, deleteTravelById, update, updateById } = require('../../models/viaje.model');
 
 
 // Peticiones GET
@@ -53,6 +53,16 @@ router.put('/update/:id', async (req, res) => {
         res.json(result_final);
     } catch (error) {
         res.json({ fatal: error.message });
+    }
+});
+
+router.put('/:viajeId/cliente/:clienteId', async (req, res) => {
+    try {
+        const { viajeId, clienteId } = req.params;
+        const [result] = await updateById(Number(viajeId), Number(clienteId));
+        res.json(result);
+    } catch (error) {
+        res.json({ fatal: error.message })
     }
 });
 

@@ -84,7 +84,7 @@ Content-Type: application/json
 
 
 ##### API de Viajes #####
-# GET http://localhost:3000/api/hoteles
+# GET http://localhost:3000/api/viajes
 GET {{host}}{{urlViajes}}
 
 ###
@@ -120,3 +120,8 @@ Content-Type: application/json
     "clientes_id": 1,
     "hotel_id": 1
 }
+
+###
+PUT {{host}}{{urlViajes}}/1/cliente/1
+
+
