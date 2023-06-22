@@ -23,9 +23,7 @@ const update = (viajeId, { fecha_salida, fecha_vuelta, id_vuelo_ida, id_vuelo_vu
 };
 
 const updateById = (viajeId, clienteId) => {
-
     return db.query(`UPDATE ${tableDb} SET viajes.clientes_id = ? WHERE viajes.id = ?`, [clienteId, viajeId]);
-
 };
 
 module.exports = { getAll, getById, create, deleteTravelById, update, updateById }
